@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react';
+import React, {useEffect, useState} from 'react';
 import { AiFillLinkedin, AiFillGithub, AiFillYoutube } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { useGlitch } from 'react-powerglitch'
