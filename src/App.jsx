@@ -5,11 +5,11 @@ import { useGlitch } from 'react-powerglitch'
 import './App.css';
 
 const titles = [
-  { text: "Computer Science student", color: "#FF6B6B", shadow: "0 0 10px #FF6B6B" },
+  { text: "Computer Science student", color: "#fc3d3d", shadow: "0 0 10px #fc3d3d" },
   { text: "Full-stack Developer", color: "#4ECDC4", shadow: "0 0 10px #4ECDC4" },
   { text: "Youtuber", color: "#FF0000", shadow: "0 0 10px #FF0000" },
-  { text: "Video Editor", color: "#45B7D1", shadow: "0 0 10px #45B7D1" },
-  { text: "Music Composer", color: "#98D8C8", shadow: "0 0 10px #98D8C8" },
+  { text: "Video Editor", color: "#3bffc4", shadow: "0 0 10px #3bffc4" },
+  { text: "Music Composer", color: "#fafa4d", shadow: "0 0 10px #fafa4d" },
   { text: "Robotic Dancer", color: "#F7B801", shadow: "0 0 10px #F7B801" },
   { text: "AI Enthusiast", color: "#7B68EE", shadow: "0 0 10px #7B68EE" },
   { text: "Problem Solver", color: "#FFA07A", shadow: "0 0 10px #FFA07A" },
@@ -31,7 +31,7 @@ const App = () => {
 
     const interval = setInterval(() => {
       setTitleIndex((prevIndex) => (prevIndex + 1) % titleArray.length);
-    }, 2000);
+    }, 1500);
 
     return () => clearInterval(interval);
   }, []);
@@ -39,7 +39,7 @@ const App = () => {
 
   const glitch = useGlitch({
     "timing": {
-      "duration": 2000,
+      "duration": 1500,
       "easing": "ease-in-out"
     },
     "glitchTimeSpan": {

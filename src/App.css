@@ -51,10 +51,13 @@ main {
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: multiply;
   background-position: center;
-  /* background-size: cover; */
   width: 100%;
+  min-height: 100vh;
 }
 
+.textBox {
+  margin-top: 3rem;
+}
 .textBox h1 {
   font-size: 4rem;
   margin-bottom: 0.5rem;
@@ -66,7 +69,7 @@ main {
 }
 
 .changing-title {
-  animation: glitch-anim 2s infinite;
+  animation: glitch-anim 1.5s infinite;
 }
 
 .scroll-indicator {
