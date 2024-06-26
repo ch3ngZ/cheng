@@ -1,19 +1,16 @@
 .app {
-  width: 100%;
-  min-height: 100vh;
-  background-image: url('/path_to_your_background_image.jpg');
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
 header {
-  position: fixed;
   display: flex;
-  width: 100%;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
   padding: 1rem 2rem;
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -21,7 +18,7 @@ header {
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
 }
 
 nav ul {
@@ -39,22 +36,31 @@ nav a {
   text-decoration: none;
 }
 
+
+
 main {
-  flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 7rem;
 }
 
-.hero h1 {
+.intro {
+  background-image: url('src/wallpaper.jpg');
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-position: center;
+  /* background-size: cover; */
+  width: 100%;
+}
+
+.textBox h1 {
   font-size: 4rem;
   margin-bottom: 0.5rem;
 }
 
-.hero h2 {
+.textBox h2 {
   font-size: 2rem;
   margin: 0.5rem 0;
 }
@@ -81,15 +87,9 @@ main {
   }
 }
 
-.hero2 {
-  background-color: #1a202c;
-  color: white;
-  min-height: 100vh;
-  padding: 2rem;
-}
 
-.about, .skills, .experience {
-  margin-bottom: 4rem;
+.about {
+
 }
 
 .about-title, .section-title {

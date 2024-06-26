@@ -78,32 +78,33 @@ const App = () => {
       </header>
 
       <main>
-        <div className="hero">
-          <h1>Hello, I'm Cheng!</h1>
-          <h2>I'm a</h2>
-          <h2 className="changing-title"  key={titleIndex}  style={{
-            marginTop: '-0.5rem', justifyContent: 'center', 
-            color: titleArray[titleIndex].color, 
-            textShadow: titleArray[titleIndex].shadow}}>
-            <span ref={glitch.ref}>{titles[titleIndex].text}.</span></h2>
-          <div className="scroll-indicator">
-            <AiOutlineArrowDown style={{width: '2rem', height: '2rem', marginTop: '1rem'}} />
+        <section className="intro">
+          <div className="textBox">
+            <h1>Hello, I'm Cheng!</h1>
+            <h2>I'm a</h2>
+            <h2 className="changing-title"  key={titleIndex}  style={{
+              marginTop: '-0.5rem', justifyContent: 'center', 
+              color: titleArray[titleIndex].color, 
+              textShadow: titleArray[titleIndex].shadow}}>
+              <span ref={glitch.ref}>{titles[titleIndex].text}.</span></h2>
+            <div className="scroll-indicator">
+              <AiOutlineArrowDown style={{width: '2rem', height: '2rem', marginTop: '1rem'}} />
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div className="hero2">
-          <section className="about">
-            <h1 className="about-title">
-              About me
-            </h1>
-            <p className="about-description">
-              I am a <span className="highlight">Computer Science</span> student at the University of Waterloo. I'm
-              passionate about <span className="highlight">AI + software applications</span>. I'm especially excited about virtual reality and the{' '}
-              <span className="highlight">metaverse</span>. I'm also passionate about learning new
-              languages and frameworks!
-            </p>
-            <button className="resume-button">See my resume</button>
-          </section>
+        <section className="about">
+          <h1 className="about-title">
+            About me
+          </h1>
+          <p className="about-description">
+            I am a <span className="highlight">Computer Science</span> student at the University of Waterloo. I'm
+            passionate about <span className="highlight">AI + software applications</span>. I'm especially excited about virtual reality and the{' '}
+            <span className="highlight">metaverse</span>. I'm also passionate about learning new
+            languages and frameworks!
+          </p>
+          <button className="resume-button">See my resume</button>
+        </section>
 
           <section className="skills">
             <h2 className="section-title">
@@ -148,7 +149,6 @@ const App = () => {
               </div>
             </div>
           </section>
-        </div>
       </main>
       
     </div>
