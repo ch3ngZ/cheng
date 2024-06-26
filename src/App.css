@@ -1,0 +1,176 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('/path_to_your_background_image.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+
+.changing-title {
+  animation: glitch-anim 2s infinite;
+}
+
+.scroll-indicator {
+  justify-content: center;
+  margin-bottom: 10rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
+.hero2 {
+  background-color: #1a202c;
+  color: white;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.about, .skills, .experience {
+  margin-bottom: 4rem;
+}
+
+.about-title, .section-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #3b82f6;
+}
+
+.about-description, .skills-description, .experience-description {
+  margin-bottom: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.resume-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.skill-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.skill-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.25rem;
+}
+
+.skill-icon.red { background-color: #ef4444; }
+.skill-icon.green { background-color: #10b981; }
+.skill-icon.blue { background-color: #3b82f6; }
+.skill-icon.yellow { background-color: #f59e0b; }
+.skill-icon.purple { background-color: #8b5cf6; }
+.skill-icon.pink { background-color: #ec4899; }
+
+.experience-card {
+  background-color: #1e3a8a;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.company-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.company-tag {
+  background-color: #1f2937;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.job-details {
+  background-color: #1f2937;
+  padding: 1rem;
+  border-radius: 0.25rem;
+}
+
+.job-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.job-date {
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
