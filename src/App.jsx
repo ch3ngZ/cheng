@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react';
-import { AiFillLinkedin, AiFillGithub, AiFillYoutube } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub, AiFillYoutube, AiFillBook } from "react-icons/ai";
 import { AiOutlineArrowDown } from "react-icons/ai";
 import { useGlitch } from 'react-powerglitch'
 import './App.css';
 
 const titles = [
-  { text: "Computer Science student", color: "#fc3d3d", shadow: "0 0 10px #fc3d3d" },
-  { text: "Full-stack Developer", color: "#4ECDC4", shadow: "0 0 10px #4ECDC4" },
-  { text: "Youtuber", color: "#FF0000", shadow: "0 0 10px #FF0000" },
-  { text: "Video Editor", color: "#3bffc4", shadow: "0 0 10px #3bffc4" },
-  { text: "Music Composer", color: "#fafa4d", shadow: "0 0 10px #fafa4d" },
-  { text: "Robotic Dancer", color: "#F7B801", shadow: "0 0 10px #F7B801" },
-  { text: "AI Enthusiast", color: "#7B68EE", shadow: "0 0 10px #7B68EE" },
-  { text: "Problem Solver", color: "#FFA07A", shadow: "0 0 10px #FFA07A" },
+  { text: "Computer Science student", color: "#71B3FF", shadow: "0 0 10px #71B3FF" },
+  { text: "Full-stack Developer", color: "#FF0000", shadow: "0 0 10px #FF0000" },
+  { text: "Youtuber", color: "#00FF00", shadow: "0 0 10px #00FF00" },
+  { text: "Video Editor", color: "#FFFF00", shadow: "0 0 10px #FFFF00" },
+  { text: "Music Composer", color: "#00FFFF", shadow: "0 0 10px #00FFFF" },
+  { text: "Robotic Dancer", color: "#FFD3B5", shadow: "0 0 10px #FFD3B5" },
+  { text: "AI Enthusiast", color: "#ff1493", shadow: "0 0 10px #ff1493" },
+  { text: "Problem Solver", color: "#f8f8ff", shadow: "0 0 10px #f8f8ff" },
 ];
 
 
@@ -34,7 +34,7 @@ const App = () => {
     }, 1500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [titles]);
 
 
   const glitch = useGlitch({
@@ -43,7 +43,7 @@ const App = () => {
       "easing": "ease-in-out"
     },
     "glitchTimeSpan": {
-      "start": 0.9,
+      "start": 0.8,
       "end": 1.0
     },
     "shake": {
@@ -70,7 +70,12 @@ const App = () => {
             </a></li>
             <li><a href="https://www.youtube.com/@c3z05" 
             target="_blank" rel="noopener noreferrer">
-            <AiFillYoutube style={{marginRight: '2rem', 
+            <AiFillYoutube style={{ 
+              width: '1.5rem', height: '1.5rem'}}/>
+            </a></li>
+            <li><a href="" 
+            target="_blank" rel="noopener noreferrer">
+            <AiFillBook style={{marginRight: '2rem', 
               width: '1.5rem', height: '1.5rem'}}/>
             </a></li>
           </ul>
@@ -79,25 +84,23 @@ const App = () => {
 
       <main>
         <section className="intro">
-          <div className="textBox">
-            <h1>Hello, I'm Cheng!</h1>
-            <h2>I'm a</h2>
-            <h2 className="changing-title"  key={titleIndex}  style={{
-              marginTop: '-0.5rem', justifyContent: 'center', 
-              color: titleArray[titleIndex].color, 
-              textShadow: titleArray[titleIndex].shadow}}>
-              <span ref={glitch.ref}>{titles[titleIndex].text}.</span></h2>
-            <div className="scroll-indicator">
-              <AiOutlineArrowDown style={{width: '2rem', height: '2rem', marginTop: '1rem'}} />
-            </div>
+          <h1>Hello, I'm Cheng!</h1>
+          <h2>I'm a</h2>
+          <h2 className="changing-title"  key={titleIndex}  style={{
+            marginTop: '-0.5rem', justifyContent: 'center', 
+            color: titleArray[titleIndex].color, 
+            textShadow: titleArray[titleIndex].shadow}}>
+            <span ref={glitch.ref}>{titles[titleIndex].text}.</span></h2>
+          <div className="scroll-indicator">
+            <AiOutlineArrowDown style={{width: '2rem', height: '2rem', marginTop: '1rem'}} />
           </div>
         </section>
 
-        <section className="about">
-          <h1 className="about-title">
-            About me
+        <section className="who">
+          <h1 className="section-title">
+            Who?
           </h1>
-          <p className="about-description">
+          <p className="who-description">
             I am a <span className="highlight">Computer Science</span> student at the University of Waterloo. I'm
             passionate about <span className="highlight">AI + software applications</span>. I'm especially excited about virtual reality and the{' '}
             <span className="highlight">metaverse</span>. I'm also passionate about learning new
@@ -106,49 +109,50 @@ const App = () => {
           <button className="resume-button">See my resume</button>
         </section>
 
-          <section className="skills">
-            <h2 className="section-title">
-              My <span className="highlight">Skills</span>
-            </h2>
-            <p className="skills-description">
-              These are some skills that I've learned from working in previous{' '}
-              <span className="highlight">engineering internships</span> and producing{' '}
-              <span className="highlight">technical side projects</span>.
-            </p>
-            <div className="skill-icons">
-              <div className="skill-icon red"></div>
-              <div className="skill-icon green"></div>
-              <div className="skill-icon blue"></div>
-              <div className="skill-icon yellow"></div>
-              <div className="skill-icon purple"></div>
-              <div className="skill-icon pink"></div>
-            </div>
-          </section>
+        <section className="what">
+          <h2 className="section-title">
+            What?
+          </h2>
+          <p className="skills-description">
+            These are some skills that I've learned from working in previous{' '}
+            <span className="highlight">engineering internships</span> and producing{' '}
+            <span className="highlight">technical side projects</span>.
+          </p>
+          <div className="skill-icons">
+            <div className="skill-icon red"></div>
+            <div className="skill-icon green"></div>
+            <div className="skill-icon blue"></div>
+            <div className="skill-icon yellow"></div>
+            <div className="skill-icon purple"></div>
+            <div className="skill-icon pink"></div>
+          </div>
 
-          <section className="experience">
-            <h2 className="section-title">
-              Places I've <span className="highlight">learned</span> and{' '}
-              <span className="highlight">worked</span>.
-            </h2>
-            <p className="experience-description">Acquiring Industry Skills at Impactful Businesses</p>
-            <div className="experience-card">
-              <div className="company-tags">
-                <span className="company-tag">SPS Commerce</span>
-                <span className="company-tag">BCS Automation</span>
-                <span className="company-tag">Legion Studios</span>
-                <span className="company-tag">HealthSmart.ai</span>
-              </div>
-              <div className="job-details">
-                <h3 className="job-title">Software Engineer Intern (Backend Team)</h3>
-                <p className="job-date">Jan 2024 – April 2024</p>
-                <p className="job-description">
-                  Engineered background processing services on the company analytics platform using
-                  ASP.NET Core to automate extraction and retrieval of retailer (Amazon, Sketchers, &
-                  Walmart) data from SQL Server DBs.
-                </p>
-              </div>
+
+          <p className="experience-description">Acquiring Industry Skills at Impactful Businesses</p>
+          <div className="experience-card">
+            <div className="company-tags">
+              <span className="company-tag">SPS Commerce</span>
+              <span className="company-tag">BCS Automation</span>
+              <span className="company-tag">Legion Studios</span>
+              <span className="company-tag">HealthSmart.ai</span>
             </div>
-          </section>
+            <div className="job-details">
+              <h3 className="job-title">Software Engineer Intern (Backend Team)</h3>
+              <p className="job-date">Jan 2024 – April 2024</p>
+              <p className="job-description">
+                Engineered background processing services on the company analytics platform using
+                ASP.NET Core to automate extraction and retrieval of retailer (Amazon, Sketchers, &
+                Walmart) data from SQL Server DBs.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="how">
+          <h2 className="section-title">
+            How?
+          </h2>
+        </section>
       </main>
       
     </div>
