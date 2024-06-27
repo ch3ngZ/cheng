@@ -96,18 +96,17 @@ const App = () => {
           </div>
         </section>
 
+        <h1 className="section-title">Who?</h1>
         <section className="who">
-          <h1 className="section-title">
-            Who?
-          </h1>
-          <p className="who-description">
-            I am a <span className="highlight">Computer Science</span> student at the University of Waterloo. I'm
-            passionate about <span className="highlight">AI + software applications</span>. I'm especially excited about virtual reality and the{' '}
-            <span className="highlight">metaverse</span>. I'm also passionate about learning new
-            languages and frameworks!
-          </p>
-          <button className="resume-button">See my resume</button>
+          <ul className="who-description">
+            <li>I am a <span className="highlight">Computer Science</span> learner at the University of Waterloo.</li>
+            <li>I am interested in <span className="highlight">AI + software applications</span> to create impact.</li>
+            <li>I am passionate about the <span className="highlight">metaverse</span> to fulfill people's dreams.</li>
+            <img src="src/Me.jpg" alt="Myself" />
+          </ul>
         </section>
+
+        <button className="resume-button">See my resume</button>
 
         <section className="what">
           <h2 className="section-title">

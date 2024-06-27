@@ -87,7 +87,6 @@ main {
   }
 }
 
-
 .section-title {
   font-size: 3rem;
   font-weight: bold;
@@ -95,11 +94,25 @@ main {
 }
 
 .highlight {
-  color: #3b82f6;
+  color: #00eeff;
 }
 
-.who-description, .who-description, .experience-description {
-  margin-bottom: 1rem;
+.who {
+  display: flex;
+  justify-content: flex-start; 
+  align-items: flex-start;
+}
+
+.who-description {
+  margin-right: auto;
+  text-align: left;
+  font-size: 1.3rem;
+}
+
+.who-description img {
+  margin-left: 50px;
+  width: 10rem;
+  height: 10rem;
 }
 
 .social-icons {
