@@ -99,8 +99,6 @@ main {
 
 .who {
   display: flex;
-  justify-content: flex-start; 
-  align-items: flex-start;
 }
 
 .who-description {
@@ -109,8 +107,12 @@ main {
   font-size: 1.3rem;
 }
 
-.who-description img {
-  margin-left: 50px;
+.who img {
+  /* margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem; */
+  margin: 2rem;
+  align-items: center;
   width: 10rem;
   height: 10rem;
 }
@@ -125,7 +127,8 @@ main {
   background-color: #3b82f6;
   color: white;
   padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 .skill-icons {

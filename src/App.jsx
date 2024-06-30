@@ -102,8 +102,8 @@ const App = () => {
             <li>I am a <span className="highlight">Computer Science</span> learner at the University of Waterloo.</li>
             <li>I am interested in <span className="highlight">AI + software applications</span> to create impact.</li>
             <li>I am passionate about the <span className="highlight">metaverse</span> to fulfill people's dreams.</li>
-            <img src="src/Me.jpg" alt="Myself" />
           </ul>
+          <img src="src/Me.jpg" alt="Myself" />
         </section>
 
         <button className="resume-button">See my resume</button>
