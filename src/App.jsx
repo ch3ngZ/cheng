@@ -15,7 +15,6 @@ const titles = [
   { text: "Problem Solver", color: "#f8f8ff", shadow: "0 0 10px #f8f8ff" },
 ];
 
-
 const App = () => {
   const [titleIndex, setTitleIndex] = useState(0);
   const [titleArray, setTitleArray] = useState(titles);
@@ -51,6 +50,24 @@ const App = () => {
     },
     "slice": {
       "velocity": 25,
+    }
+  });
+
+  const hoverGlitch = useGlitch({
+    "playMode": "hover",
+    "timing": {
+      "duration": 250,
+      "iterations": 1
+    },
+    "glitchTimeSpan": {
+      "start": 0,
+      "end": 0.5
+    },
+    "shake": {
+      "velocity": 15,
+    },
+    "slice": {
+      "velocity": 15,
     }
   });
 
@@ -100,13 +117,12 @@ const App = () => {
         <section className="who">
           <ul className="who-description">
             <li>I am a <span className="highlight">Computer Science</span> learner at the University of Waterloo.</li>
-            <li>I am interested in <span className="highlight">AI + software applications</span> to create impact.</li>
+            <li>I am skillful at <span className="highlight">AI + software applications</span> to create impact.</li>
             <li>I am passionate about the <span className="highlight">metaverse</span> to fulfill people's dreams.</li>
+            <button className="resume-button">Check my resume</button>
           </ul>
-          <img src="src/Me.jpg" alt="Myself" />
+          <span ref={hoverGlitch.ref}><img src="src/Me.jpg" alt="Myself"/></span>
         </section>
-
-        <button className="resume-button">See my resume</button>
 
         <section className="what">
           <h2 className="section-title">
@@ -117,6 +133,7 @@ const App = () => {
             <span className="highlight">engineering internships</span> and producing{' '}
             <span className="highlight">technical side projects</span>.
           </p>
+          
           <div className="skill-icons">
             <div className="skill-icon red"></div>
             <div className="skill-icon green"></div>
